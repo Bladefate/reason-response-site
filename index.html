@@ -1,13 +1,266 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Reason Response</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reputation Architecture | Professional Review Management</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-dark: #0f172a;
+            --bg-card: #1e293b;
+            --accent: #38bdf8;
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+            --border: #334155;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Layout Containers */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        section {
+            padding: 80px 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        /* Typography */
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+            letter-spacing: -0.02em;
+        }
+
+        .accent-text { color: var(--accent); }
+
+        /* Hero Section */
+        .hero {
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            background: radial-gradient(circle at top right, #1e293b 0%, #0f172a 70%);
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: var(--text-muted);
+            max-width: 700px;
+            margin: 0 auto 2rem;
+        }
+
+        /* Buttons */
+        .btn {
+            background-color: var(--accent);
+            color: var(--bg-dark);
+            padding: 1rem 2rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 700;
+            display: inline-block;
+            transition: var(--transition);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(56, 189, 248, 0.2);
+        }
+
+        /* Services Grid */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .card {
+            background: var(--bg-card);
+            padding: 2.5rem;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            transition: var(--transition);
+        }
+
+        .card:hover {
+            border-color: var(--accent);
+        }
+
+        .card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--accent);
+        }
+
+        /* Tiers Table */
+        .table-container {
+            overflow-x: auto;
+            margin-top: 3rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: var(--bg-card);
+            border-radius: 8px;
+        }
+
+        th, td {
+            padding: 1.5rem;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+        }
+
+        th {
+            background: #111827;
+            color: var(--accent);
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+        }
+
+        /* Philosophy Section */
+        .philosophy {
+            background: #111827;
+            text-align: center;
+        }
+
+        .quote {
+            font-style: italic;
+            font-size: 1.5rem;
+            color: var(--text-muted);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        footer {
+            padding: 40px 0;
+            text-align: center;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            table { font-size: 0.9rem; }
+        }
+    </style>
 </head>
-<body style="font-family: Arial; text-align: center; padding: 60px;">
-  <h1>Reason Response</h1>
-  <p>Professional responses to your business reviews.</p>
-  <p>Save time. Protect your reputation. Grow your brand.</p>
-  <a href="mailto:jarrodcole@gmail.com">Get Started</a>
+<body>
+
+    <header class="hero">
+        <div class="container">
+            <h1>Reputation <span class="accent-text">Architecture</span></h1>
+            <p>I act as the stability anchor for overextended business owners. I manage your reviews with precision, ensuring your excellence is visible and your voice remains calm.</p>
+            <a href="#audit" class="btn">Request a Reputation Audit</a>
+        </div>
+    </header>
+
+    <section>
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 3rem;">Structure Equals <span class="accent-text">Safety</span></h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>End Decision Fatigue</h3>
+                    <p>Stop agonizing over how to respond to complex feedback. I handle the engagement so you can focus on the work that matters.</p>
+                </div>
+                <div class="card">
+                    <h3>Risk Mitigation</h3>
+                    <p>I provide a professional buffer between your business and high-stakes feedback, preventing minor issues from becoming crises.</p>
+                </div>
+                <div class="card">
+                    <h3>Continuous Growth</h3>
+                    <p>Strategic responses and systematic review generation ensure your "star power" grows predictably and authentically.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h2 style="text-align: center;">Strategic Service Tiers</h2>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>The Guardian</th>
+                            <th>The Architect</th>
+                            <th>The Fortress</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Focus</strong></td>
+                            <td>Stability & Monitoring</td>
+                            <td>Growth & Engagement</td>
+                            <td>Total Strategy</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Response Time</strong></td>
+                            <td>48 Hours</td>
+                            <td>24 Hours</td>
+                            <td>Same Day Priority</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Reporting</strong></td>
+                            <td>Quarterly Audit</td>
+                            <td>Monthly Progress</td>
+                            <td>Bi-Weekly Strategy</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Ideal For</strong></td>
+                            <td>Solopreneurs</td>
+                            <td>Growing Teams</td>
+                            <td>High-Stakes Service</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <section id="audit" class="philosophy">
+        <div class="container">
+            <h2 style="margin-bottom: 1.5rem;">Custom Solutions, Not Commodities</h2>
+            <p style="max-width: 700px; margin: 0 auto 2rem; color: var(--text-muted);">
+                I don't provide one-size-fits-all pricing because I don't provide one-size-fits-all services. Fees are based on the complexity of your systems and the level of risk mitigation required.
+            </p>
+            <p class="quote">"Being needed is not the same as being known. We ensure your excellence is both visible and verified."</p>
+            <br><br>
+            <a href="mailto:hello@reasonresponse.com" class="btn">Get My Custom Audit</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Reason Response | Precision • Integrity • Continuity</p>
+        </div>
+    </footer>
+
 </body>
 </html>
