@@ -1,2 +1,2 @@
 # reason-response-site
-Turn every review into an opportunity with fast, professional responses.
+Done-for-you responses to customer reviews so you can focus on running your business.
